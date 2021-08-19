@@ -5,19 +5,41 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.ecirstea.creepyrabbit.view.navigation.HomeActivity
+import android.widget.Toast
+import androidx.activity.viewModels
+import com.ecirstea.creepyrabbit.databinding.ActivityMainBinding
+import com.ecirstea.creepyrabbit.ui.navigation.HomeActivity
+import com.ecirstea.creepyrabbit.ui.viewmodel.JwtViewModel
 
+private const val TAG = "TAG"
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private val jwtViewModel: JwtViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        jwtViewModel.jwtModel.observe(this, {
+            if(it?.token != null){
+                val intent = Intent(this, HomeActivity::class.java).apply {
+                    //putExtra(EXTRA_MESSAGE, message)
+                }
+                Log.d(TAG, "onCreate main activity: before starting activity")
+                startActivity(intent)
+            }else{
+                Toast.makeText(this, "Nope, failed in Auth", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        binding.buttonLogin.setOnClickListener { login() }
     }
 
-     fun startActivity(view: View){
-        val intent = Intent(this, HomeActivity::class.java).apply {
-            //putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
+
+
+    private fun login() {
+        val email = binding.editTextTextEmailAddress.text.toString().trim()
+        val password = binding.editTextTextPassword.text.toString().trim()
+        jwtViewModel.login(email, password)
     }
 }

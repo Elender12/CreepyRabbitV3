@@ -1,4 +1,4 @@
-package com.ecirstea.creepyrabbit.view.navigation
+package com.ecirstea.creepyrabbit.ui.navigation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

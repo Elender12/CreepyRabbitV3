@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.ecirstea.creepyrabbit.view.navigation.HomeFragment"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/profile"
-        android:name="com.ecirstea.creepyrabbit.view.navigation.ProfileFragment"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/notification"
-        android:name="com.ecirstea.creepyrabbit.view.navigation.NotificationFragment"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.NotificationFragment"
         android:label="Notification"
         tools:layout="@layout/fragment_notification" />
 </navigation>
