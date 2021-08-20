@@ -18,8 +18,8 @@
     <string name="greeting">Gelou there</string>
     <string name="myName">Elena</string>
     <string name="don_t_have_an_account_register_now">Do not have an account? <b>Register Now</b></string>
-    <string name="username">username</string>
-    <string name="email_hint">elena</string>
+    <string name="username">Username</string>
+    <string name="email_hint">user@gmail.com</string>
     <string name="password">password</string>
     <string name="login">Login</string>
     <string name="forgot_your_password">Forgot your password?</string>
@@ -36,6 +36,7 @@
     <string name="rules">Rules</string>
     <string name="humans_beasts">Humans &amp; Beasts</string>
     <string name="all">All collections</string>
+    <string name="edit">Edit</string>
 
 
 </resources>
