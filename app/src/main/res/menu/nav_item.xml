@@ -5,23 +5,51 @@
         android:title="@string/my_account"
         >
         <menu>
+
             <item
                 android:id="@+id/home"
                 android:title="@string/home"
+
                 android:icon="@drawable/ic_home"
-                />
-            <item
-                android:id="@+id/profile"
-                android:title="@string/profile"
-                android:icon="@drawable/ic_person"
                 />
             <item
                 android:id="@+id/notification"
                 android:title="@string/notification"
                 android:icon="@drawable/ic_notifications"
                 />
+            <item
+                android:id="@+id/profile"
+                android:title="@string/profile"
+                android:icon="@drawable/ic_person"
+                />
+
 
         </menu>
+
+    </item>
+    <item
+        android:title="@string/categories"
+        >
+        <menu>
+            <item
+                android:title="@string/supernatural"
+                android:icon="@drawable/ic_supernatural"
+                />
+            <item
+                android:title="@string/rules"
+                android:icon="@drawable/ic_rule"
+                />
+            <item
+                android:title="@string/humans_beasts"
+                android:icon="@drawable/ic_user_circle"
+                />
+            <item
+                android:title="@string/all"
+                android:icon="@drawable/ic_border"
+                />
+
+        </menu>
+
 
     </item>
     <item
@@ -30,15 +58,11 @@
         <menu>
             <item
                 android:title="Contacts Us"
-                android:icon="@drawable/ic_contactus"
+                android:icon="@drawable/ic_message"
                 />
             <item
                 android:title="Private Policy"
-                android:icon="@drawable/ic_policy"
-                />
-            <item
-                android:title="Setting"
-                android:icon="@drawable/ic_settings"
+                android:icon="@drawable/ic_file"
                 />
 
         </menu>

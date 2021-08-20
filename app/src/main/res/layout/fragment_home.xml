@@ -38,11 +38,11 @@
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="168dp"
-            android:layout_height="46dp"
+            android:layout_width="242dp"
+            android:layout_height="53dp"
             android:layout_marginTop="64dp"
-            android:layout_marginEnd="120dp"
-            android:text="@string/rituals"
+            android:layout_marginEnd="84dp"
+            android:text="@string/humans_beasts"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -52,7 +52,7 @@
             android:layout_height="46dp"
             android:layout_marginTop="260dp"
             android:layout_marginEnd="128dp"
-            android:text="@string/friends"
+            android:text="@string/supernatural"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
