@@ -1,6 +1,8 @@
 package com.ecirstea.creepyrabbit
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,11 +12,13 @@ import androidx.activity.viewModels
 import com.ecirstea.creepyrabbit.databinding.ActivityMainBinding
 import com.ecirstea.creepyrabbit.ui.navigation.HomeActivity
 import com.ecirstea.creepyrabbit.ui.viewmodel.JwtViewModel
+import com.ecirstea.creepyrabbit.utils.Constants.SHARED_PREF_FILE
 
 private const val TAG = "TAG"
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val jwtViewModel: JwtViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -22,6 +26,15 @@ class MainActivity : AppCompatActivity() {
 
         jwtViewModel.jwtModel.observe(this, {
             if(it?.token != null){
+                val sharedPreferences: SharedPreferences = applicationContext.getSharedPreferences(SHARED_PREF_FILE,
+                    Context.MODE_PRIVATE)
+                val editor:SharedPreferences.Editor =  sharedPreferences.edit()
+                Log.d(TAG, "onCreate: username: ${it.username}")
+                editor.apply{
+                    putString("name_key", it.username)
+                }.apply()
+
+
                 val intent = Intent(this, HomeActivity::class.java).apply {
                     //putExtra(EXTRA_MESSAGE, message)
                 }

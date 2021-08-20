@@ -9,4 +9,6 @@ import retrofit2.http.POST
 interface JwtApiClient {
     @POST("/authenticate")
     suspend fun authenticateUser(@Body body: JwtRequest): Response<JwtResponse>
+
+
 }

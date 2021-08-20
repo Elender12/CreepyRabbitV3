@@ -31,6 +31,10 @@
     <string name="navigation_drawer_close">Close</string>
     <string name="userimage">userImage</string>
     <string name="home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="rituals">Rituals</string>
+    <string name="rules">Rules</string>
+    <string name="friends">Friends</string>
 
 
 </resources>

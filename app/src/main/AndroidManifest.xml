@@ -13,7 +13,9 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.CreepyRabbit">
         <activity android:name=".ui.view.PlayerActivity" />
+        <activity android:name=".ui.view.ListActivity" />
         <activity android:name=".ui.navigation.HomeActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
