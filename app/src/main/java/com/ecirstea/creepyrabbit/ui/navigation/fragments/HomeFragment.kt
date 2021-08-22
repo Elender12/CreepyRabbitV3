@@ -11,7 +11,7 @@ import com.ecirstea.creepyrabbit.R
 import com.ecirstea.creepyrabbit.ui.navigation.HomeActivity
 import com.ecirstea.creepyrabbit.ui.view.ListActivity
 import kotlinx.android.synthetic.main.fragment_home.*
-const val TAG= "HomeFragment"
+private const val TAG= "HomeFragment"
 class HomeFragment : Fragment() {
    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

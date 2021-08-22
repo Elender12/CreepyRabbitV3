@@ -8,7 +8,9 @@
     <string name="notification">Notification</string>
     <string name="userName">Robin Mikel</string>
     <string name="prompt_email">Email</string>
+    <string name="new_email">New email</string>
     <string name="prompt_password">Password</string>
+    <string name="new_pass">New password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
@@ -20,7 +22,7 @@
     <string name="don_t_have_an_account_register_now">Do not have an account? <b>Register Now</b></string>
     <string name="username">Username</string>
     <string name="email_hint">user@gmail.com</string>
-    <string name="password">password</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="register_now">Register Now</string>
@@ -37,6 +39,8 @@
     <string name="humans_beasts">Humans &amp; Beasts</string>
     <string name="all">All collections</string>
     <string name="edit">Edit</string>
+    <string name="pass_hint">*************</string>
+    <string name="save">Save</string>
 
 
 </resources>

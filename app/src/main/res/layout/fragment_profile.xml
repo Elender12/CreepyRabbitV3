@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.navigation.fragments.ProfileFragment">
 
+    <!--    HEADER -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -33,14 +34,16 @@
             android:src="@drawable/musicrabbit" />-->
 
         <TextView
+            android:id="@+id/tvFullname"
             style="@style/TextName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="170dp"
-            android:text="@string/userName" />
+             />
 
     </LinearLayout>
 
+    <!--EDIT BOTTON-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -60,18 +63,18 @@
             android:background="@drawable/bg_circle"/>
 
         <TextView
+            android:id="@+id/tvBtnEdit"
             style="@style/TextButton"
-            android:layout_width="wrap_content"
+            android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/aldrich"
-
             android:gravity="center"
             android:text="@string/edit"
             android:textSize="24sp" />
 
     </FrameLayout>
-
+    <!--BODY LAYOUT-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -81,11 +84,12 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical">
 
+        <!--USERNAME -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="14dp">
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:layout_width="50dp"
@@ -105,10 +109,11 @@
                     style="@style/TextBlackTitle"/>
 
                 <TextView
+                    android:id="@+id/tvUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/userName"
-                    style="@style/TextDescription"/>
+                    android:autofillHints="@string/username"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -148,6 +153,7 @@
 
         </LinearLayout>-->
 
+        <!--EMAIL LAYOUT-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -159,7 +165,8 @@
                 android:layout_height="50dp"
                 android:padding="4dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_email"/>
+                android:src="@drawable/ic_email"
+                android:contentDescription="@string/userimage" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -171,7 +178,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    android:text="@string/prompt_email" />
+                    android:text="@string/new_email" />
 
                 <!--<TextView
                     android:layout_width="match_parent"
@@ -179,21 +186,20 @@
                     android:text="@string/email_hint"
                     style="@style/TextDescription"/>-->
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="match_parent"
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:focusable="false"
-                    android:inputType="textPersonName"
-                    android:text="@string/email_hint" />
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="@string/email_hint" />
 
             </LinearLayout>
 
         </LinearLayout>
 
 
-
-        <!--       <LinearLayout
+        <!--PASSWORD LAYOUT-->
+        <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
@@ -204,7 +210,7 @@
                        android:layout_height="50dp"
                        android:padding="4dp"
                        android:layout_marginEnd="10dp"
-                       android:src="@drawable/ic_address"/>
+                       android:src="@drawable/ic_password"/>
 
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -214,18 +220,41 @@
                        <TextView
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="@string/address_title"
+                           android:text="@string/new_pass"
                            style="@style/TextBlackTitle"/>
 
-                       <TextView
-                           android:layout_width="match_parent"
+                       <EditText
+                           android:id="@+id/editTextUserPassword"
+                           style="@style/TextDescription"
+                           android:layout_width="wrap_content"
+                           android:ems="10"
                            android:layout_height="wrap_content"
-                           android:text="@string/address"
-                           style="@style/TextDescription"/>
+                           android:inputType="textPassword"
+                           />
 
                    </LinearLayout>
 
-               </LinearLayout>-->
+               </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="40dp">
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="140dp"
+                android:layout_width="wrap_content"
+                android:text="@string/save" />
+        </LinearLayout>
 
     </LinearLayout>
 

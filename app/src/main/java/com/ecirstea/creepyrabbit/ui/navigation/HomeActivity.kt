@@ -15,6 +15,7 @@ import androidx.navigation.ui.NavigationUI
 import com.ecirstea.creepyrabbit.MainActivity
 import com.ecirstea.creepyrabbit.R
 import com.ecirstea.creepyrabbit.utils.Constants
+import com.ecirstea.creepyrabbit.utils.SharedApp
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header.*
 private const val TAG= "HomeActivity"
@@ -41,12 +42,13 @@ class HomeActivity : AppCompatActivity() {
             }
 
         //Shared preferences
-        val sharedPreferences: SharedPreferences = applicationContext.getSharedPreferences(
+   /*     val sharedPreferences: SharedPreferences = applicationContext.getSharedPreferences(
             Constants.SHARED_PREF_FILE,
             Context.MODE_PRIVATE)
-        val prefUsername = sharedPreferences.getString("name_key","Anonymous")
+        val prefUsername = sharedPreferences.getString("name_key","Anonymous")*/
+
         val headerView : View = navView.getHeaderView(0)
         val navUsername : TextView = headerView.findViewById(R.id.username)
-        navUsername.text = prefUsername
+        navUsername.text =    SharedApp.prefs.name
     }
 }

@@ -13,6 +13,7 @@ import com.ecirstea.creepyrabbit.databinding.ActivityMainBinding
 import com.ecirstea.creepyrabbit.ui.navigation.HomeActivity
 import com.ecirstea.creepyrabbit.ui.viewmodel.JwtViewModel
 import com.ecirstea.creepyrabbit.utils.Constants.SHARED_PREF_FILE
+import com.ecirstea.creepyrabbit.utils.SharedApp
 
 private const val TAG = "TAG"
 class MainActivity : AppCompatActivity() {
@@ -26,15 +27,16 @@ class MainActivity : AppCompatActivity() {
 
         jwtViewModel.jwtModel.observe(this, {
             if(it?.token != null){
-                val sharedPreferences: SharedPreferences = applicationContext.getSharedPreferences(SHARED_PREF_FILE,
+            /*    val sharedPreferences: SharedPreferences = applicationContext.getSharedPreferences(SHARED_PREF_FILE,
                     Context.MODE_PRIVATE)
-                val editor:SharedPreferences.Editor =  sharedPreferences.edit()
+                val editor:SharedPreferences.Editor =  sharedPreferences.edit()*/
                 Log.d(TAG, "onCreate: username: ${it.username}")
-                editor.apply{
+           /*     editor.apply{
                     putString("name_key", it.username)
-                }.apply()
-
-
+                    putString("token", it.token)
+                }.apply()*/
+                SharedApp.prefs.name = it.username
+                SharedApp.prefs.token= it.token
                 val intent = Intent(this, HomeActivity::class.java).apply {
                     //putExtra(EXTRA_MESSAGE, message)
                 }
