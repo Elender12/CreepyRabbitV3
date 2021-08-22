@@ -43,7 +43,10 @@
     <string name="save">Save</string>
     <string name="sign_out">Sign out</string>
     <string name="bye">Until next time!</string>
-    <string name="contacts_us">Contacts Us</string>
+    <string name="narrator">Narrator:</string>
+    <string name="author">Author:</string>
+    <string name="contact">Contact us</string>
+    <string name="category">Category: </string>
 
 
 </resources>

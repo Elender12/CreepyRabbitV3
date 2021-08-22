@@ -10,49 +10,97 @@
         android:id="@+id/ivAvatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@string/userimage"
+        android:layout_centerVertical="true"
         android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tvTitle"
+        style="@style/TextBlackTitle"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-104dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/ivAvatar"
+        android:fontFamily="@font/open_sans_light"
+        android:gravity="fill_horizontal"
+        android:lineSpacingExtra="6sp"
+        android:textSize="20sp"
+        tools:text="Very large Title creepy pasta that could ocupy 3 lines maybe" />
+
+
+    <TextView
+        android:id="@+id/tvNarratorLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginStart="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/ivAvatar"
-        tools:text= "Title creepypasta" />
+        style="@style/LabelDescription"
+        android:text="@string/narrator" />
 
     <TextView
         android:id="@+id/tvNarrator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/ivAvatar"
-        android:textSize="15sp"
-        tools:text="Narrator" />
+        style="@style/LabelDescription"
+        tools:text="Custom Name" />
 
+    <TextView
+        android:id="@+id/tvAuthorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNarrator"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/ivAvatar"
+        style="@style/LabelDescription"
+        android:text="@string/author" />
     <TextView
         android:id="@+id/tvAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="8dp"
+        android:layout_below="@+id/tvNarrator"
+        android:layout_marginTop="4dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="110dp"
         android:layout_toEndOf="@+id/ivAvatar"
-        android:textSize="15sp"
-        tools:text="Author" />
+        style="@style/LabelDescription"
+        tools:text="Custom Name" />
+
+ <!--   <TextView
+        android:id="@+id/tvCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAuthor"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/ivAvatar"
+        style="@style/TextDescription"
+        android:text="@string/category" />
 
     <TextView
         android:id="@+id/tvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvAuthor"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="113dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/ivAvatar"
-        android:textSize="15sp"
-        tools:text="Category" />
+        style="@style/TextDescription"
+        tools:text="category" />-->
 
 </RelativeLayout>

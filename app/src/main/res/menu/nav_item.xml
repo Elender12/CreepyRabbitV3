@@ -44,6 +44,7 @@
                 android:icon="@drawable/ic_user_circle"
                 />
             <item
+                android:id="@+id/allCollections"
                 android:title="@string/all"
                 android:icon="@drawable/ic_border"
                 />
@@ -57,7 +58,7 @@
         >
         <menu>
             <item
-                android:title="@string/contacts_us"
+                android:title="@string/contact"
                 android:icon="@drawable/ic_message"
                 />
             <item

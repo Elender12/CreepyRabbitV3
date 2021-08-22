@@ -45,7 +45,7 @@ class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
             view.tvAuthor.text = metadata.author
             view.tvNarrator.text = metadata.narrator
             view.tvTitle.text= metadata.title
-            view.tvCategory.text = metadata.category
+            //view.tvCategory.text = metadata.category
             view.setOnClickListener{
                 val intent = Intent(context, PlayerActivity::class.java).apply {
                     putExtra("audioURL", metadata.audioUrl)

@@ -25,4 +25,9 @@
         android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.SignOutFragment"
         android:label="SignOut"
         tools:layout="@layout/fragment_sign_out" />
+    <fragment
+        android:id="@+id/allCollections"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.AllCollectionFragment"
+        android:label="All collections"
+        tools:layout="@layout/fragment_all_collection" />
 </navigation>
