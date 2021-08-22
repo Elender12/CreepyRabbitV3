@@ -47,6 +47,9 @@
     <string name="author">Author:</string>
     <string name="contact">Contact us</string>
     <string name="category">Category: </string>
+    <string name="custom_string">%1$s | narrated by %2$s.</string>
+    <string name="favorites">Add to favorites</string>
+    <string name="loading">LOADING...</string>
 
 
 </resources>

@@ -10,6 +10,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#c5c7c5"
         tools:context=".ui.navigation.HomeActivity">
 
      <com.facebook.shimmer.ShimmerFrameLayout
@@ -26,15 +27,15 @@
                 android:layout_height="689dp"
                 android:orientation="vertical">
 
-                <include layout="@layout/item_row_load" />
+                <include layout="@layout/item_model_row_load" />
+
+          <!--      <include layout="@layout/item_row_load" />
 
                 <include layout="@layout/item_row_load" />
 
                 <include layout="@layout/item_row_load" />
 
-                <include layout="@layout/item_row_load" />
-
-                <include layout="@layout/item_row_load" />
+                <include layout="@layout/item_row_load" />-->
 
             </LinearLayout>
 
@@ -42,8 +43,8 @@
 
      <androidx.recyclerview.widget.RecyclerView
          android:id="@+id/rvAudioList"
-         android:layout_width="410dp"
-         android:layout_height="681dp"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
          android:scrollbars="vertical"
          app:layoutManager="LinearLayoutManager"
          app:layout_constraintBottom_toBottomOf="parent"

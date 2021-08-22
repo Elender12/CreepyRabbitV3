@@ -11,7 +11,8 @@ import com.bumptech.glide.Glide
 import com.ecirstea.creepyrabbit.R
 import com.ecirstea.creepyrabbit.data.model.multimedia.MultimediaData
 import com.ecirstea.creepyrabbit.ui.view.PlayerActivity
-import kotlinx.android.synthetic.main.item_audio_list.view.*
+//import kotlinx.android.synthetic.main.item_audio_list.view.*
+import kotlinx.android.synthetic.main.item_audio_model.view.*
 
 class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerAdapter.MetadataHolder>() {
     private var multimediaDataList = mutableListOf<MultimediaData>()
@@ -22,7 +23,7 @@ class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MetadataHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
 
-        return MetadataHolder(layoutInflater.inflate(R.layout.item_audio_list, parent, false))
+        return MetadataHolder(layoutInflater.inflate(R.layout.item_audio_model, parent, false))
     }
 
     override fun onBindViewHolder(holder: MetadataHolder, position: Int) {
@@ -41,10 +42,13 @@ class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
 
     inner class MetadataHolder(val view: View): RecyclerView.ViewHolder(view){
         fun render(metadata: MultimediaData){
-            Glide.with(context).load(metadata.imageUrl).into(view.ivAvatar)
-            view.tvAuthor.text = metadata.author
+            Glide.with(context).load(metadata.imageUrl).into(view.item_image)
+          /*  view.tvAuthor.text = metadata.author
             view.tvNarrator.text = metadata.narrator
-            view.tvTitle.text= metadata.title
+            view.tvTitle.text= metadata.title*/
+            view.item_details_author.text = context.resources.getString(R.string.custom_string, metadata.author, metadata.narrator)
+           // view.item_details_narrator.text = metadata.narrator
+            view.item_title.text= metadata.title
             //view.tvCategory.text = metadata.category
             view.setOnClickListener{
                 val intent = Intent(context, PlayerActivity::class.java).apply {
