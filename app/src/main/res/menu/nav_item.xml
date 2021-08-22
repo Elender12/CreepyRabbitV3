@@ -57,12 +57,13 @@
         >
         <menu>
             <item
-                android:title="Contacts Us"
+                android:title="@string/contacts_us"
                 android:icon="@drawable/ic_message"
                 />
             <item
-                android:title="Private Policy"
-                android:icon="@drawable/ic_file"
+                android:id="@+id/sign_out"
+                android:title="@string/sign_out"
+                android:icon="@drawable/ic_sign_out"
                 />
 
         </menu>

@@ -20,4 +20,9 @@
         android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.NotificationFragment"
         android:label="Notification"
         tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/sign_out"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.SignOutFragment"
+        android:label="SignOut"
+        tools:layout="@layout/fragment_sign_out" />
 </navigation>

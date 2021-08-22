@@ -5,7 +5,7 @@
     <string name="my_account">My Account</string>
     <string name="profile">Profile</string>
     <string name="other">Other</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Notifications</string>
     <string name="userName">Robin Mikel</string>
     <string name="prompt_email">Email</string>
     <string name="new_email">New email</string>
@@ -41,6 +41,9 @@
     <string name="edit">Edit</string>
     <string name="pass_hint">*************</string>
     <string name="save">Save</string>
+    <string name="sign_out">Sign out</string>
+    <string name="bye">Until next time!</string>
+    <string name="contacts_us">Contacts Us</string>
 
 
 </resources>
