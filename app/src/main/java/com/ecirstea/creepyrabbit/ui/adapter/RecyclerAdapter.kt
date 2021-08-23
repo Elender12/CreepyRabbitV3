@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ecirstea.creepyrabbit.R
 import com.ecirstea.creepyrabbit.data.model.multimedia.MultimediaData
+import com.ecirstea.creepyrabbit.network.FirestoreHelper
 import com.ecirstea.creepyrabbit.ui.view.PlayerActivity
 //import kotlinx.android.synthetic.main.item_audio_list.view.*
 import kotlinx.android.synthetic.main.item_audio_model.view.*
 
 class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerAdapter.MetadataHolder>() {
     private var multimediaDataList = mutableListOf<MultimediaData>()
+    private val store = FirestoreHelper()
     fun setListData(data: MutableList<MultimediaData>){
         multimediaDataList= data
     }
@@ -46,7 +48,7 @@ class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
           /*  view.tvAuthor.text = metadata.author
             view.tvNarrator.text = metadata.narrator
             view.tvTitle.text= metadata.title*/
-            view.item_details_author.text = context.resources.getString(R.string.custom_string, metadata.author, metadata.narrator)
+         //   view.item_details_author.text = context.resources.getString(R.string.custom_string, metadata.author, metadata.narrator)
            // view.item_details_narrator.text = metadata.narrator
             view.item_title.text= metadata.title
             //view.tvCategory.text = metadata.category
@@ -54,12 +56,14 @@ class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
                 val intent = Intent(context, PlayerActivity::class.java).apply {
                     putExtra("audioURL", metadata.audioUrl)
                     putExtra("title",metadata.title)
-
                 }
-
                 context.startActivity(intent)
-                Toast.makeText(view.context, "has seleccionado a  ${metadata.author}", Toast.LENGTH_LONG).show()
             }
+           view.favsBtn.setOnClickListener{
+             store.saveFavorites(metadata.mediaId)
+               view.favsBtn.text = context.getString(R.string.added)
+           }
+
         }
     }
 

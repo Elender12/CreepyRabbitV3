@@ -12,11 +12,11 @@
 
                 android:icon="@drawable/ic_home"
                 />
-            <item
+   <!--         <item
                 android:id="@+id/notification"
                 android:title="@string/notification"
                 android:icon="@drawable/ic_notifications"
-                />
+                />-->
             <item
                 android:id="@+id/profile"
                 android:title="@string/profile"
@@ -32,14 +32,17 @@
         >
         <menu>
             <item
+                android:id="@+id/supernatural_cat"
                 android:title="@string/supernatural"
                 android:icon="@drawable/ic_supernatural"
                 />
             <item
+                android:id="@+id/rules_cat"
                 android:title="@string/rules"
                 android:icon="@drawable/ic_rule"
                 />
             <item
+                android:id="@+id/humans_cat"
                 android:title="@string/humans_beasts"
                 android:icon="@drawable/ic_user_circle"
                 />
@@ -58,6 +61,7 @@
         >
         <menu>
             <item
+                android:id="@+id/contactUs"
                 android:title="@string/contact"
                 android:icon="@drawable/ic_message"
                 />
@@ -68,9 +72,5 @@
                 />
 
         </menu>
-
-
     </item>
-
-
 </menu>

@@ -20,8 +20,7 @@
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:padding="10dp"
-            android:singleLine="true"
-            tools:text="AudioName"
+            tools:text="AudioName very large name that should occupy more than 3 lines"
             android:textColor="#FFF"
             android:textSize="33sp"
             android:textAlignment="center"
@@ -87,29 +86,21 @@
                 android:id="@+id/playBtn"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/ic_play"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_play_circle_filled_24"
                 android:onClick="playAudio" />
 
             <ImageButton
-                android:id="@+id/nextBtn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:id="@+id/stopBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_toEndOf="@+id/playBtn"
-                android:background="@drawable/ic_next" />
-
-            <ImageButton
-                android:id="@+id/prevBtn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_toStartOf="@+id/playBtn"
-                android:background="@drawable/ic_previous" />
-
-
+                android:background="@drawable/ic_baseline_stop_circle_24"
+                android:onClick="stopAudio" />
 
 
         </RelativeLayout>

@@ -30,4 +30,24 @@
         android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.AllCollectionFragment"
         android:label="All collections"
         tools:layout="@layout/fragment_all_collection" />
+    <fragment
+        android:id="@+id/contactUs"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.ContactUsFragment"
+        android:label="Contact us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/humans_cat"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.HumansCategoryFragment"
+        android:label="Humans &amp; not only..."
+        tools:layout="@layout/fragment_humans_category" />
+    <fragment
+        android:id="@+id/rules_cat"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.RulesCategoryFragment"
+        android:label="Rules"
+        tools:layout="@layout/fragment_rules_category" />
+    <fragment
+        android:id="@+id/supernatural_cat"
+        android:name="com.ecirstea.creepyrabbit.ui.navigation.fragments.SupernatCategoryFragment"
+        android:label="Supernatural"
+        tools:layout="@layout/fragment_supernat_category" />
 </navigation>

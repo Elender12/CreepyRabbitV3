@@ -22,6 +22,7 @@ private const val TAG= "player"
 class PlayerActivity : AppCompatActivity() {
     private lateinit var mediaPlayer : MediaPlayer
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
@@ -129,18 +130,18 @@ class PlayerActivity : AppCompatActivity() {
                   }
 
                   */
-        if(mediaPlayer.isPlaying){
+        /*if(mediaPlayer.isPlaying){
             Toast.makeText(this@PlayerActivity, "AudioIS NOT Playing RIGHT NOW", Toast.LENGTH_SHORT).show()
-            playBtn.setBackgroundResource(R.drawable.ic_play)
+            playBtn.setBackgroundResource(R.drawable.ic_baseline_play_circle_filled_24)
             mediaPlayer.pause()
         }else{
             Toast.makeText(this@PlayerActivity, "Audio is playing RIGHT NOW", Toast.LENGTH_SHORT).show()
-            playBtn.setBackgroundResource(R.drawable.ic_pause)
+            playBtn.setBackgroundResource(R.drawable.ic_baseline_pause_circle_filled_24)
             mediaPlayer.start()
 
             updateSongTime.run()
 
-        }
+        }*/
 
         //}
 
@@ -170,18 +171,29 @@ class PlayerActivity : AppCompatActivity() {
            }
        }*/
 
+
+
     fun playAudio( view: View){
         if(mediaPlayer.isPlaying){
             Toast.makeText(this@PlayerActivity, "AudioIS NOT Playing RIGHT NOW", Toast.LENGTH_SHORT).show()
-            playBtn.setBackgroundResource(R.drawable.ic_play)
+            playBtn.setBackgroundResource(R.drawable.ic_baseline_play_circle_filled_24)
             mediaPlayer.pause()
         }else{
             Toast.makeText(this@PlayerActivity, "Audio is playing RIGHT NOW", Toast.LENGTH_SHORT).show()
-            playBtn.setBackgroundResource(R.drawable.ic_pause)
+            playBtn.setBackgroundResource(R.drawable.ic_baseline_pause_circle_filled_24)
             mediaPlayer.start()
             //onCompleteSong()
             updateSongTime.run()
 
+        }
+
+    }
+
+    fun stopAudio(view: View){
+        try {
+            mediaPlayer.stop()
+            mediaPlayer.release()
+        } catch (e: UninitializedPropertyAccessException) {
         }
 
     }

@@ -15,7 +15,7 @@ private const val TAG= "HomeFragment"
 class HomeFragment : Fragment() {
    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       btnFriends.setOnClickListener{
+       buttonFavs.setOnClickListener{
            val intent = Intent(context, ListActivity::class.java).apply {
                //putExtra(EXTRA_MESSAGE, message)
            }

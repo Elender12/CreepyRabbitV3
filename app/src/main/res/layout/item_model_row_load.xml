@@ -58,6 +58,7 @@
         android:fontFamily="@font/diablo"
         android:text="@string/loading"
         android:textSize="35sp"
+        android:textColor="@color/light_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
