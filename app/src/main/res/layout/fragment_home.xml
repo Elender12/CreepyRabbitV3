@@ -51,7 +51,8 @@
             android:layout_marginBottom="16dp"
             android:src="@drawable/app_logo"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/userimage" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

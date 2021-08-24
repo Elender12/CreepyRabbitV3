@@ -25,19 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="689dp"
                 android:orientation="vertical">
-
                 <include layout="@layout/item_model_row_load" />
-
-          <!--      <include layout="@layout/item_row_load" />
-
-                <include layout="@layout/item_row_load" />
-
-                <include layout="@layout/item_row_load" />
-
-                <include layout="@layout/item_row_load" />-->
-
             </LinearLayout>
-
         </com.facebook.shimmer.ShimmerFrameLayout>
 
      <androidx.recyclerview.widget.RecyclerView

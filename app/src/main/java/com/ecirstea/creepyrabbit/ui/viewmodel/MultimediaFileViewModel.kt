@@ -26,4 +26,12 @@ class MultimediaFileViewModel: ViewModel() {
         }
         return mutableData
     }
+    fun getFavsAudios() : LiveData<MutableList<MultimediaData>> {
+        val mutableData = MutableLiveData<MutableList<MultimediaData>>()
+        source.getFavoritesByUsername().observeForever{ audios ->
+            mutableData.value = audios
+        }
+        return mutableData
+    }
+
 }

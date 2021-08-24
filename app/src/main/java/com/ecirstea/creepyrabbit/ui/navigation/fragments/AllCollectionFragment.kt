@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ecirstea.creepyrabbit.R
 import com.ecirstea.creepyrabbit.ui.adapter.RecyclerAdapter
 import com.ecirstea.creepyrabbit.ui.viewmodel.MultimediaFileViewModel
-import kotlinx.android.synthetic.main.activity_list.*
+import kotlinx.android.synthetic.main.fragment_all_collection.*
+
 
 class AllCollectionFragment : Fragment() {
     //ModelView items
