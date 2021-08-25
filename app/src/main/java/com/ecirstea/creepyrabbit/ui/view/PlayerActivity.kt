@@ -29,7 +29,11 @@ class PlayerActivity : AppCompatActivity() {
         val extras = intent.extras
         val title = extras!!.get("title") as String
         val audioUrl: String = extras.get("audioURL") as String
+        val author: String = extras.get("author") as String
+        val narrator: String =  extras.get("narrator")  as String
         tvAudioTitle.text = title
+        tvNarratedBy.text = resources.getString(R.string.narrated, narrator)
+        tvWrittenBy.text = resources.getString(R.string.author, author)
 
         try {
             mediaPlayer = MediaPlayer().apply {
@@ -54,7 +58,7 @@ class PlayerActivity : AppCompatActivity() {
 
         seekbar.max = mediaPlayer.duration
         val totalTime = createTime(mediaPlayer.duration)
-        tvAudioStart.text = startTime.toString()
+        tvAudioStart.text = resources.getString(startTime)
         tvAudioStop.text = totalTime
 
         //colors for progress bar
@@ -100,79 +104,7 @@ class PlayerActivity : AppCompatActivity() {
                 onCompleteSong()
             }
         }.start()
-
-
-        /*  Thread(Runnable {
-              while (mediaPlayer != null) {
-                  try {
-                      var msg = Message()
-                      msg.what = mediaPlayer.currentPosition
-                      handler.sendMessage(msg)
-                      sleep(1000)
-                  } catch (e: InterruptedException) {
-                  }
-              }
-          }).start()*/
-
-        /*      playBtn.setOnClickListener {
-
-
-                  mediaPlayer.start()
-
-                  playBtn.setBackgroundResource(R.drawable.ic_pause)
-                  updateSongTime.run()
-                  mediaPlayer.setOnCompletionListener(MediaPlayer.OnCompletionListener {  })
-                  mediaPlayer.setOnCompletionListener {
-                      MediaPlayer.OnCompletionListener { mp ->
-                          Log.d(TAG, "onCompleteSong: ++")
-                          mp?.release()
-                      }
-                  }
-
-                  */
-        /*if(mediaPlayer.isPlaying){
-            Toast.makeText(this@PlayerActivity, "AudioIS NOT Playing RIGHT NOW", Toast.LENGTH_SHORT).show()
-            playBtn.setBackgroundResource(R.drawable.ic_baseline_play_circle_filled_24)
-            mediaPlayer.pause()
-        }else{
-            Toast.makeText(this@PlayerActivity, "Audio is playing RIGHT NOW", Toast.LENGTH_SHORT).show()
-            playBtn.setBackgroundResource(R.drawable.ic_baseline_pause_circle_filled_24)
-            mediaPlayer.start()
-
-            updateSongTime.run()
-
-        }*/
-
-        //}
-
-
-        /*      if(mediaPlayer.currentPosition == mediaPlayer.duration){
-
-
-            mediaPlayer.stop()
-            mediaPlayer.release()
-        }*/
-        Log.d(TAG, "onCreate: ????")
-
     }
-    /*   @SuppressLint("HandlerLeak")
-       var handler = object : Handler() {
-           override fun handleMessage(msg: Message) {
-               var currentPosition = msg.what
-               // Update positionBar
-               seekbar.progress = currentPosition
-               Log.d(TAG, "handleMessage: $currentPosition")
-               Log.d(TAG, "handleMessage: ${mediaPlayer.duration}")
-               if(mediaPlayer.duration == currentPosition){
-
-                   Log.d(TAG, "handleMessage: if condition")
-               }
-
-           }
-       }*/
-
-
-
     fun playAudio( view: View){
         if(mediaPlayer.isPlaying){
             Toast.makeText(this@PlayerActivity, "AudioIS NOT Playing RIGHT NOW", Toast.LENGTH_SHORT).show()
@@ -184,21 +116,8 @@ class PlayerActivity : AppCompatActivity() {
             mediaPlayer.start()
             //onCompleteSong()
             updateSongTime.run()
-
         }
-
     }
-
-    fun stopAudio(view: View){
-        try {
-            mediaPlayer.stop()
-            mediaPlayer.release()
-        } catch (e: UninitializedPropertyAccessException) {
-        }
-
-    }
-
-
     private fun createTime(duration: Int): String{
         var time: String
         val min: Int = duration/1000/60

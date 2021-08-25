@@ -2,6 +2,7 @@ package com.ecirstea.creepyrabbit.ui.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,9 +47,10 @@ class FavsRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<F
         fun render(metadata: MultimediaData){
             Glide.with(context).load(metadata.imageUrl).into(view.item_image)
             view.item_title.text= metadata.title
-           view.delBtn.setOnClickListener{
+            view.delBtn.setOnClickListener{
              store.deleteFavorite(metadata.mediaId)
                Toast.makeText(view.context, "Item deleted!", Toast.LENGTH_LONG).show()
+                view.visibility = View.GONE
            }
 
         }

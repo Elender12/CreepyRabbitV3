@@ -21,8 +21,8 @@
     <string name="myName">Elena</string>
     <string name="don_t_have_an_account_register_now">Do not have an account? <b>Register Now</b></string>
     <string name="username">Username</string>
-    <string name="email_hint">user@gmail.com</string>
-    <string name="password">Password</string>
+    <string name="email_hint">your username</string>
+    <string name="password">Password:</string>
     <string name="login">Login</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="register_now">Register Now</string>
@@ -43,8 +43,8 @@
     <string name="save">Save</string>
     <string name="sign_out">Sign out</string>
     <string name="bye">Until next time!</string>
-    <string name="narrator">Narrator:</string>
-    <string name="author">Author:</string>
+    <string name="narrator">Narrator: 1$s</string>
+    <string name="author">Author: %1$s</string>
     <string name="contact">Contact us</string>
     <string name="category">Category: </string>
     <string name="custom_string">%1$s | narrated by %2$s.</string>
@@ -54,7 +54,12 @@
     <string name="favorites_list">Favorites</string>
     <string name="my_lists">My    lists</string>
     <string name="remove">Remove</string>
-
-
-
+    <string name="subContact">We are listening!</string>
+    <string name="msj">How can we help? Write us any query, complain or suggestion</string>
+    <string name="send">Send</string>
+    <string name="policy">By clicking Send, you agree that you have read our Data Use Policy.</string>
+    <string name="narrated">Narrated by: %1$s</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="join_us">Join us!</string>
 </resources>

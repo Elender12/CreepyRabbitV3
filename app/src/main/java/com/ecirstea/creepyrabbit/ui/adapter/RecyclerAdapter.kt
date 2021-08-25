@@ -56,6 +56,8 @@ class RecyclerAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
                 val intent = Intent(context, PlayerActivity::class.java).apply {
                     putExtra("audioURL", metadata.audioUrl)
                     putExtra("title",metadata.title)
+                    putExtra("author", metadata.author)
+                    putExtra("narrator", metadata.narrator)
                 }
                 context.startActivity(intent)
             }

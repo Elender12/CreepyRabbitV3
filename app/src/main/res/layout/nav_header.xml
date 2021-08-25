@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:background="@drawable/toolbar_background">
+    android:background="#063F41">
     <LinearLayout
         android:orientation="horizontal"
         android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
         <LinearLayout
             android:layout_weight="1"
             android:layout_gravity="center"
@@ -19,34 +18,29 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/username"
-                android:text="@string/userName"
-                android:textSize="20sp"
-                android:textStyle="bold|normal"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="Verified"
-                android:textSize="10sp"
-                android:textStyle="normal"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:ignore="SmallSp" />
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/userName"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold|normal" />
 
         </LinearLayout>
-        <com.google.android.material.imageview.ShapeableImageView
+
+ <!--       <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="59dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:src="@drawable/musicrabbit"
-            app:shapeAppearanceOverlay="@style/Circular"
-            app:strokeWidth="2dp"
             android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/white_bunny"
+
             app:strokeColor="@android:color/darker_gray"
-            android:layout_width="65dp"
-            android:layout_height="65dp"/>
+            app:strokeWidth="2dp" />-->
 
 
     </LinearLayout>

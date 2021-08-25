@@ -20,27 +20,16 @@ import com.ecirstea.creepyrabbit.utils.SharedApp
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 private const val TAG= "ProfileFragment"
 class ProfileFragment : Fragment() {
     private val userViewModel: UserViewModel by viewModels()
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val inf = inflater.inflate(R.layout.fragment_profile, container, false)
-        var user: User = User()
-        var userId: String
-        var fullName : String= "No Name"
+        var user = User()
         val emailET : EditText? =   inf.findViewById(R.id.editTextEmail)
         val passET : EditText? = inf.findViewById(R.id.editTextUserPassword)
         val saveBtn : Button = inf.findViewById(R.id.btnSave)
@@ -50,18 +39,9 @@ class ProfileFragment : Fragment() {
             if (it != null) {
                 user = it
             }
-            fullName = it?.name ?: "No Name"
-            var email = it?.email ?: "no@email"
-            userId = it?.id ?: ""
             inf.findViewById<TextView>(R.id.tvFullname).text = it?.name ?: "No name"
             val username = it?.username ?: "username"
-            val userEmail = it?.email ?: "no email"
             inf.findViewById<TextView>(R.id.tvUsername).setText(username)
-            //emailET?.setText(userEmail)
-           // emailET?.focusable = View.GONE
-            // inf.findViewById<EditText>(R.id.editTextEmail).setText(userEmail)
-            //tv.text= fullName
-
         })
         saveBtn.setOnClickListener{
             val newEmail = emailET?.text
@@ -74,13 +54,8 @@ class ProfileFragment : Fragment() {
                 user.password = newPass.toString()
                 Toast.makeText(activity,"saved $newPass",Toast.LENGTH_LONG).show()
             }
-
             userViewModel.updateUser(user)
-
         }
-        // Inflate the layout for this fragment
-       // val fullNameTxt = container?.findViewById<TextView>(R.id.tvFullname)
-
         return inf
     }
 }

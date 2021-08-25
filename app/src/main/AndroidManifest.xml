@@ -13,10 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CreepyRabbit"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ui.view.RegisterActivity"></activity>
+
         <service
             android:name=".services.PlayerService"
             android:enabled="true"
             android:exported="false" />
+
         <activity android:name=".ui.view.PlayerActivity" />
         <activity android:name=".ui.view.ListActivity" />
         <activity android:name=".ui.navigation.HomeActivity" />

@@ -5,6 +5,7 @@ import com.ecirstea.creepyrabbit.core.RetrofitHelper
 import com.ecirstea.creepyrabbit.data.model.jwt.JwtRequest
 import com.ecirstea.creepyrabbit.data.model.jwt.JwtResponse
 import com.ecirstea.creepyrabbit.data.model.user.User
+import com.ecirstea.creepyrabbit.data.model.user.UserFeedback
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -35,6 +36,21 @@ class UserService {
         return withContext(Dispatchers.IO){
             val response= retrofit.create(UserApiClient::class.java).updateUser(user)
             Log.d(TAG, "updated user: "+response.body())
+            response.body()
+        }
+    }
+
+    suspend fun saveUserData(user: User): User?{
+        return withContext(Dispatchers.IO){
+            val response= retrofit.create(UserApiClient::class.java).saveUser(user)
+            Log.d(TAG, "saved user: "+response.body())
+            response.body()
+        }
+    }
+
+    suspend fun sendUserMsj(msj: UserFeedback): String?{
+        return withContext(Dispatchers.IO){
+            val response= retrofit.create(UserApiClient::class.java).sendMsj(msj)
             response.body()
         }
     }

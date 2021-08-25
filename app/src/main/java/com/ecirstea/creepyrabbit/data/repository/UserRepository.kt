@@ -4,6 +4,7 @@ import android.util.Log
 import com.ecirstea.creepyrabbit.data.model.jwt.JwtRequest
 import com.ecirstea.creepyrabbit.data.model.jwt.JwtResponse
 import com.ecirstea.creepyrabbit.data.model.user.User
+import com.ecirstea.creepyrabbit.data.model.user.UserFeedback
 import com.ecirstea.creepyrabbit.network.UserService
 
 private const val TAG = "UserRepository"
@@ -27,6 +28,20 @@ class UserRepository {
     suspend fun  updateUserData(user: User): User?{
         val response = userService.updateUserData(user)
         Log.d(TAG, "update user" +
+                ": $response")
+        return response
+    }
+
+    suspend fun  saveUserData(user: User): User?{
+        val response = userService.saveUserData(user)
+        Log.d(TAG, "saved user" +
+                ": $response")
+        return response
+    }
+
+    suspend fun  sendUserMsj(msj: UserFeedback): String?{
+        val response = userService.sendUserMsj(msj)
+        Log.d(TAG, "send user msj" +
                 ": $response")
         return response
     }
