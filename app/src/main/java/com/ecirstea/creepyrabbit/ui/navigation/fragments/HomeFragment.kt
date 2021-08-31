@@ -17,10 +17,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
        buttonFavs.setOnClickListener{
            val intent = Intent(context, ListActivity::class.java).apply {
-               //putExtra(EXTRA_MESSAGE, message)
            }
            startActivity(intent)
-           Log.d(TAG, "onViewCreated: test?")
        }
 
     }

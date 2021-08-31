@@ -79,7 +79,6 @@ class FirestoreHelper {
                 favsCollection.document(SharedApp.prefs.name).set(hashMap)
             }
         favsCollection.document(SharedApp.prefs.name).update("audioList", FieldValue.arrayUnion(audioId))
-      //favsCollection.document(SharedApp.prefs.name).update("audioList", FieldValue.arrayUnion(hashMap))
           .addOnSuccessListener {
               Log.d(TAG, "saveFavorites: saved??")
           }
@@ -89,16 +88,6 @@ class FirestoreHelper {
 
 
         }
-
- /*       favsCollection.document(SharedApp.prefs.name).get()
-            .addOnSuccessListener {
-            Log.d(TAG, "saveFavorites: doc exists")
-            }
-            .addOnFailureListener{
-                Log.d(TAG, "saveFavorites: docNOT EXISTS")
-            }*/
-
-
 
     }
     fun deleteFavorite(audioId: String) {

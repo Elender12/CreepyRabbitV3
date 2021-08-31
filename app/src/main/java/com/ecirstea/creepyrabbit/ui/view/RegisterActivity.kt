@@ -9,6 +9,7 @@ import com.ecirstea.creepyrabbit.MainActivity
 import com.ecirstea.creepyrabbit.data.model.user.User
 import com.ecirstea.creepyrabbit.databinding.ActivityRegisterBinding
 import com.ecirstea.creepyrabbit.ui.viewmodel.UserViewModel
+import com.ecirstea.creepyrabbit.utils.RegistrationUtil
 import kotlinx.android.synthetic.main.activity_register.*
 
 private const val TAG= "register"
@@ -40,6 +41,11 @@ class RegisterActivity : AppCompatActivity() {
         val email = binding.ETRegisteredEmail.text.toString().trim()
         val password = binding.ETRegisteredPassword.text.toString().trim()
         //TODO validations for data
-        userViewModel.saveUser(User(name=name, username = username, password = password, email = email))
+        if (RegistrationUtil.validateRegistrationInput(name, email,username, password)){
+            userViewModel.saveUser(User(name=name, username = username, password = password, email = email))
+        }else{
+            Toast.makeText(this, "Please check to fill all the fields.", Toast.LENGTH_LONG).show()
+        }
+
     }
 }

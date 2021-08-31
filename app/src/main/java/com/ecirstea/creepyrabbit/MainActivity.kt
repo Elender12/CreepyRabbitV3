@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "onCreate main activity: before starting activity")
                 startActivity(intent)
             }else{
-                Toast.makeText(this, "Nope, failed in Auth", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "User/Password incorrect. Please try again.", Toast.LENGTH_SHORT).show()
             }
         })
 

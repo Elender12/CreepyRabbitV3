@@ -47,6 +47,16 @@ class FavsRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<F
         fun render(metadata: MultimediaData){
             Glide.with(context).load(metadata.imageUrl).into(view.item_image)
             view.item_title.text= metadata.title
+            view.setOnClickListener{
+                val intent = Intent(context, PlayerActivity::class.java).apply {
+                    putExtra("audioURL", metadata.audioUrl)
+                    putExtra("title",metadata.title)
+                    putExtra("author", metadata.author)
+                    putExtra("narrator", metadata.narrator)
+                }
+                context.startActivity(intent)
+            }
+
             view.delBtn.setOnClickListener{
              store.deleteFavorite(metadata.mediaId)
                Toast.makeText(view.context, "Item deleted!", Toast.LENGTH_LONG).show()
